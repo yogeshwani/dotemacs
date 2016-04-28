@@ -26,7 +26,6 @@
 (elpy-enable)
 ;(setq elpy-rpc-backend "rope")
 
-
 ;;helm
 (require 'helm)
 (require 'helm-config)
@@ -42,11 +41,19 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (setq helm-buffers-fuzzy-matching t
       helm-recentf-fuzzy-match    t)
+
 ;;Cscope
 ;(add-to-list 'load-path "/xcscope.el")
 (require 'xcscope)
 (cscope-setup)
 (setq cscope-relative-paths t)
+
+;;Whitespace configuration
+(require 'whitespace)
+(global-whitespace-mode t)
+(setq whitespace-global-modes '(c-mode c++-mode python-mode))
+(setq whitespace-style '(face tabs lines-tail trailing))
+
 
 ;;Auto-complete configuration
 ; start auto-complete with emacs
