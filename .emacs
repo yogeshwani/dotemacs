@@ -19,6 +19,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
 ;;Emacs configurations
 (windmove-default-keybindings 'meta)
 
@@ -27,6 +28,9 @@
 
 ; Stop creating #autosave# files
 (setq auto-save-default nil)
+
+; Show column in status bar
+(setq column-number-mode 1)
 
 ;;Elpy configuration
 (elpy-enable)
