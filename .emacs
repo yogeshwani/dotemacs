@@ -22,7 +22,13 @@
 ;;Emacs configurations
 (windmove-default-keybindings 'meta)
 
-;;;elpy configuration
+; Stop creating backup~ files
+(setq make-backup-files nil)
+
+; Stop creating #autosave# files
+(setq auto-save-default nil)
+
+;;Elpy configuration
 (elpy-enable)
 ;(setq elpy-rpc-backend "rope")
 
