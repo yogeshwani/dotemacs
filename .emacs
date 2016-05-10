@@ -39,6 +39,16 @@
 ;;helm
 (require 'helm)
 (require 'helm-config)
+;;helm useful keybindings
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t)
+;;get original UI for helm-semantic-or-imenu to display tags in c mode
+;;taken from https://github.com/emacs-helm/helm/issues/1128
+(with-eval-after-load 'helm-semantic
+      (push '(c-mode . semantic-format-tag-summarize) helm-semantic-display-style)
+      (push '(c++-mode . semantic-format-tag-summarize) helm-semantic-display-style))
 (helm-mode 1)
 
 ;;;helm projectile configuration
@@ -46,11 +56,6 @@
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
 
-;;helm useful keybindings
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(setq helm-buffers-fuzzy-matching t
-      helm-recentf-fuzzy-match    t)
 
 ;;Cscope
 ;(add-to-list 'load-path "/xcscope.el")
