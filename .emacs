@@ -32,6 +32,21 @@
 ; Show column in status bar
 (setq column-number-mode 1)
 
+;; Disable Emacs toolbar
+(tool-bar-mode -1)
+
+;;C Mode confiuration
+
+;;Indentation
+(setq c-default-style "linux"
+      c-basic-offset 4)
+
+;;No TABS only spaces for indentation
+(setq-default indent-tabs-mode nil)
+
+;;Set the tab width = 4
+(setq tab-width 4)
+
 ;;Elpy configuration
 (elpy-enable)
 ;(setq elpy-rpc-backend "rope")
