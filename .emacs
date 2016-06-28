@@ -49,7 +49,11 @@
 
 ;;Elpy configuration
 (elpy-enable)
-;(setq elpy-rpc-backend "rope")
+
+;;(setq elpy-rpc-backend "rope")
+
+;;Set the elpy rpc python command to python3 
+(setq elpy-rpc-python-command "python3")
 
 ;;helm
 (require 'helm)
