@@ -38,6 +38,8 @@
 ;;C Mode confiuration
 
 ;;C comment auto wraping setting
+;Reference URl
+;http://stackoverflow.com/questions/11969442/comment-mode-in-emacs
 (setq fill-column 76)
 (setq comment-auto-fill-only-comments t)
 (auto-fill-mode t)
