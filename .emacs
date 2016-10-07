@@ -37,6 +37,11 @@
 
 ;;C Mode confiuration
 
+;;C comment auto wraping setting
+(setq fill-column 76)
+(setq comment-auto-fill-only-comments t)
+(auto-fill-mode t)
+
 ;;Indentation
 (setq c-default-style "linux"
       c-basic-offset 4)
@@ -50,9 +55,9 @@
 ;;Elpy configuration
 (elpy-enable)
 
-;;(setq elpy-rpc-backend "rope")
+(setq elpy-rpc-backend "jedi")
 
-;;Set the elpy rpc python command to python3 
+;;Set the elpy rpc python command to python3
 (setq elpy-rpc-python-command "python3")
 
 ;;helm
@@ -103,7 +108,7 @@
 (defun my:ac-c-header-init ()
   (require 'auto-complete-c-headers)
   (add-to-list 'ac-sources 'ac-source-c-headers)
-  (add-to-list 'achead:include-directories '"~/repos/scsc-fw-maxwell-dev/")
+  (add-to-list 'achead:include-directories '"~/repos/DIR/")
 )
 
 ; now let's call this function from c/c++ hooks
